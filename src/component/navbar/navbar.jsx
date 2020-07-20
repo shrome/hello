@@ -5,9 +5,12 @@ export default class Navbar extends Component{
     render() {
         return (
             <header>
+                <section className="verticenterize">
+                    <Link to="/">Afetra</Link> 
+                </section>
                 <nav >
                     <div>
-                        <Link to="/">Home</Link>
+                        <Link to="/">About</Link>
                     </div>
                     <div>
                         <Link to="/new">New</Link>

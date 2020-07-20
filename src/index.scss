@@ -17,13 +17,13 @@ code {
   left: 50%;
   transform: translateX(-50%);
 }
-@mixin verticenterize {
+.verticenterize {
   top: 50%;
   transform: translateY(-50%);
 }
 .centerize {
   @include horicenterize;
-  @include verticenterize;
+  @extend .verticenterize;
   transform: translate(-50%,-50%) !important;
   &-absolute{
     @extend .centerize;
@@ -46,6 +46,14 @@ header{
   position: relative;
   background-color: lightgreen;
   padding: 1rem;
+  section{
+    position: absolute;
+    @extend .verticenterize;
+    a{
+      color:black;
+      text-decoration: none;
+    }
+  }
   nav{
     @extend .centerize-absolute; 
     display: flex;
