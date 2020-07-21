@@ -10,37 +10,11 @@ class Input extends React.Component{
       input:""
     }
   }
-
-  onChangeInput(e){
-    e.preventDefault()
-    this.setState({
-      input:e.target.value
-    })
-  }
-
-  onSubmit(e){
-    e.preventDefault()
-    this.props.addNewMessage(this.state.input)
-    this.setState({
-      input:''
-    })
-  }
-
   render() {
     return (
       <section>
-        <div>
-          <input type="text" value={this.state.input} onChange={this.onChangeInput.bind(this)} />
-          <input type="submit" value="Add" onClick={this.onSubmit.bind(this)} />
-        </div>
-        <ul>
-          {
-          this.props.list.map((obj,idx) =>{
-            return (<li key={idx} >{obj}</li>)
-          })
-          }
-          
-        </ul>
+        <Card/>
+        <Card/>
       </section>
     );
   }
@@ -49,9 +23,9 @@ class Input extends React.Component{
 class NewInput extends React.Component{
     render() {
         return (
-            <ul>
+            <div>
               <Card/>
-            </ul>
+            </div>
         );
     }
 }

@@ -13,7 +13,7 @@ export default class Navbar extends Component{
                         <Link to="/">About</Link>
                     </div>
                     <div>
-                        <Link to="/new">New</Link>
+                        <Link to="/new">New Course</Link>
                     </div>
                 </nav>
             </header>

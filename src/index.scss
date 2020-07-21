@@ -42,7 +42,7 @@ div{
 }
 
 header{
-  height: 40px;
+  height: 30px;
   position: relative;
   background-color: lightgreen;
   padding: 1rem;
@@ -66,10 +66,31 @@ header{
     }
   }
 }
+h1,h3,p{
+  margin: 0;
+}
 .cardBorder{
-  border:"1px black solid";
+  margin: 1rem;
+  height: 130px;
+  border:1px black solid;
   .BigCard{
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    .CardContent{
+      h3{
+        margin-top: 10px;
+      }
+      p{
+        margin-top: 5px;
+        font-size: 15px;
+      }
+    }
+    .CardButton{
+      margin: 0 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
